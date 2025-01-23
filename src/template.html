@@ -5,10 +5,23 @@
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
         <title></title>
         <link rel="stylesheet" href="condensate.min.css">
+        <link rel="stylesheet" href="variables.css">
     </head>
     <body>
-        <div class="fullscreen hbox">
-            {content}
+        <div class="fullscreen vbox">
+            <header class="hbox">
+                <img src="logo.png" class="height-font-xxl">
+                <h1 class="font-xl portrait-hidden">Icosahunter</h1>
+                <span class="spacer"></span>
+                <nav class="hbox button-group flush">
+                    <a class="button" href="software">Software</a>
+                    <a class="button" href="stories">Literature</a>
+                </nav>
+                <input class="dm-toggle" type="checkbox">
+            </header>
+            <main class="width-lg scroll-x center">
+                    {content}
+            </main>
         </div>
     </body>
 </html>

@@ -2,7 +2,7 @@ from pathlib import Path
 from re import X
 import shutil
 
-copy_globs = ['*.css', '*.js']
+copy_globs = ['*.css', '*.js', '*.png']
 page_globs = ['**/*.txt']
 template = Path('template.html')
 src = Path('src/')
@@ -34,7 +34,7 @@ with open(src / template, 'r') as f:
 
 for x in pages:
     page = ''
-    dest = dist / x.relative_to(src).with_suffix(template.suffix)
+    dest = dist / x.relative_to(src).with_suffix('.html')
     dest.parent.mkdir(exist_ok=True)
     with open(x, 'r') as f:
         page = t.format(content=f.read())

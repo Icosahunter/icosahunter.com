@@ -1,0 +1,51 @@
+:root {
+    --font-size: 1.1rem;
+    --font-family: sans-serif;
+    --header-font-family: var(--font-family);
+    --mono-font-family: monospace;
+    --border-radius: 0.4rem;
+    --border-width: 3px;
+    --input-border: 0;
+    --button-border: var(--input-border);
+    --panel-border: 3px;
+    --button-group-sep-border: var(--button-border);
+    --table-border: var(--border-width);
+    --table-v-border: var(--table-border);
+    --table-h-border: var(--table-border);
+    --table-header-bg: var(--panel-color);
+    --table-body-bg: var(--background-color);
+    --button-border-radius: var(--border-radius);
+    --spacing: 0.6rem;
+
+    --dm-font-color: #ddd;
+    --dm-alt-font-color: #000;
+    --dm-check-color: #fff;
+    --dm-background-color: #000;
+    --dm-alt-background-color: #0a0a0a;
+    --dm-panel-color: #000;
+    --dm-button-color: #160029;
+    --dm-primary-color: #6969ff;
+    --dm-secondary-color: #2cb1ff;
+    --dm-success-color: #9abe48;
+    --dm-warning-color: #ffd163;
+    --dm-error-color: #f25e5b;
+    --dm-border-color: #160029;
+    --dm-hover-brightness: 130%;
+    --dm-alt-hover-brightness: 75%;
+
+    --lm-font-color: #000;
+    --lm-alt-font-color: #fff;
+    --lm-check-color: #fff;
+    --lm-background-color: #fff;
+    --lm-alt-background-color: #fafafa;
+    --lm-panel-color: #ece5ce;
+    --lm-button-color: #ccc;
+    --lm-primary-color: #6969ff;
+    --lm-secondary-color: #2cb1ff;
+    --lm-success-color: #3bf589;
+    --lm-warning-color: #f5c33b;
+    --lm-error-color: #f53b3b;
+    --lm-border-color: #000;
+    --lm-hover-brightness: 105%;
+    --lm-alt-hover-brightness: 88%;
+}
