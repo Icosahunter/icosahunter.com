@@ -11,9 +11,7 @@ publish:
     do
         rm -rf $f
     done
-    for f in `ls /tmp/icosahunter/dist`
+    for f in `ls /tmp/icosahunter/`
     do
-        mv /tmp/icosahunter/dist/$f .
+        mv /tmp/icosahunter/$f .
     done
-    git add --all
-    git commit -m "Publish"
