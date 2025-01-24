@@ -1,12 +1,12 @@
 from pathlib import Path
-from re import X
 import shutil
 
-copy_globs = ['*.css', '*.js', '*.png']
-page_globs = ['**/*.txt']
-template = Path('template.html')
+copy_globs = ['*.css', '*.js', '*.png', '*.svg', '*.jpg', '*.gif']
+page_globs = ['**/*.html', '**/*.txt']
 src = Path('src/')
 dist = Path('dist/')
+home = src / 'home.html'
+template = src / 'template.html'
 
 if dist.exists():
     shutil.rmtree(dist)
@@ -21,6 +21,8 @@ pages = []
 for x in page_globs:
     pages.extend(src.glob(x))
 
+pages = [x for x in pages if x not in to_copy and x != template ]
+
 dist.mkdir(exist_ok=True)
 
 for x in to_copy:
@@ -29,12 +31,15 @@ for x in to_copy:
     shutil.copy(x, dest)
 
 t = ''
-with open(src / template, 'r') as f:
+with open(template, 'r') as f:
     t = f.read()
 
 for x in pages:
     page = ''
-    dest = dist / x.relative_to(src).with_suffix('.html')
+
+    dest = dist / x.relative_to(src).with_suffix('') / 'index.html'
+    if x == home:
+        dest = dist / 'index.html'
     dest.parent.mkdir(exist_ok=True)
     with open(x, 'r') as f:
         page = t.format(content=f.read())
