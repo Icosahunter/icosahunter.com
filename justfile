@@ -11,7 +11,7 @@ publish: build
     do
         rm -rf $f
     done
-    for f in `ls /tmp/icosahunter/`
+    for f in `ls /tmp/icosahunter/dist`
     do
-        mv /tmp/icosahunter/$f .
+        mv /tmp/icosahunter/dist/$f .
     done
