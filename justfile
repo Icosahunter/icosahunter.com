@@ -1,7 +1,7 @@
 build:
     python3 build.py
 
-publish:
+publish: build
     #!/usr/bin/env bash
     rm -rf /tmp/icosahunter
     mkdir /tmp/icosahunter
