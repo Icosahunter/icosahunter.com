@@ -15,7 +15,7 @@
     --table-header-bg: var(--panel-color);
     --table-body-bg: var(--background-color);
     --button-border-radius: var(--border-radius);
-    --spacing: 0.6rem;
+    --spacing: 1rem;
 
     --dm-font-color: #ddd;
     --dm-alt-font-color: #000;
