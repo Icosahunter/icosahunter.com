@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import shutil
 
 copy_globs = ['**/*.css', '**/*.js', '**/*.png', '**/*.svg', '**/*.jpg', '**/*.gif', 'CNAME']
@@ -40,7 +41,7 @@ for x in pages:
     dest = dist / x.relative_to(src).with_suffix('') / 'index.html'
     if x == home:
         dest = dist / 'index.html'
-    dest.parent.mkdir(exist_ok=True)
+    os.makedirs(dest, exist_ok=True)
     with open(x, 'r') as f:
         page = t.format(content=f.read())
     with open(dest, '+w') as f:
