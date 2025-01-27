@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 import shutil
 
-copy_globs = ['**/*.css', '**/*.js', '**/*.png', '**/*.svg', '**/*.jpg', '**/*.gif', 'CNAME']
+copy_globs = ['**/*.css', '**/*.js', '**/*.png', '**/*.svg', '**/*.jpg', '**/*.JPG', '**/*.gif', 'CNAME']
 page_globs = ['**/*.html', '**/*.txt']
 src = Path('src/')
 dist = Path('dist/')
